@@ -8,6 +8,7 @@ Proje isterlerine göre AWS üzerinde kullanacağımız tüm servisleri sıralay
 - VPC
 - ECS Fargate
 - Security Group
+- Load Balancer
 - CloudWatch
 - Auto Scaling Service
 
