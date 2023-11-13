@@ -1,0 +1,9 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Run disk usage script every 2 hours
+      cron:
+        name: Check disk usage
+        hour: "*/2"
+        job: "/home/scripts/disk_usage_check.sh"
