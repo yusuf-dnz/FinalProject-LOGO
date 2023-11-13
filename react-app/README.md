@@ -102,3 +102,8 @@ bu aşamada projemde yaptığım değişikliklerin (örn: Yeni ana menü butonu)
 #### Deploy
 Uygulamamın deploy edilmiş olduğu sunucu servisi (AWS) üzerinde yeni güncellemenin deploy edilmesi adımlarını içeriyor. Bu adımda aws komutlarını işleyebilmem için awscli paketini yüklüyorum. Key ve region konfigürasyonu sonrasında ```aws ecs update-service``` komutu ile yeni uygulama imajımı ECS servisi üzerinde yayınlıyorum. Bu aşamada varsayılan olarak "Rolling Update" işlemi başlıyor. Bu işlem eski sürüme ait çalışan task'lerin birer birer kapatılıp yerine yeni oluşturulan güncel task'lerin geçmesini sağlar. Tüm task'ler güncel haliyle değiştikten sonra işlem başarıyla tamamlanır.
 
+![Ekran görüntüsü 2023-11-14 000211](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/84adf2e0-b02d-4d37-9366-e4e91e1e1c0c)
+
+Uygulamamız Rolling Update yöntemiyle yeni sürümü deploy edildi.
+
+![Ekran görüntüsü 2023-11-13 235926](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/61446d26-b841-4ef7-a725-fe01a8527e40)
