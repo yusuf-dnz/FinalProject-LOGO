@@ -1,5 +1,5 @@
 <h1 align="center" >Logo Yazılım & Fırat Üniversitesi & Patika</h1>
-<h1 align="center" >LOG-in DevOps Bootcamp Bitirme Projesi</h1>
+<h2 align="center" >LOG-in DevOps Bootcamp Bitirme Projesi</h2>
 
 ## Proje isterleri
 - React kullanarak bir web uygulaması oluşturulmak.
@@ -11,3 +11,5 @@
 
 ## Sistem Dizaynı;
 ![aws-architecture drawio](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/f213645d-7e16-41c8-a556-b9aab94025d7)
+
+<h3 align="center" >Proje aşamalarının README.md dosyaları kendi dizinleri içerisinde</h3>
