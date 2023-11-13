@@ -1,6 +1,6 @@
-node_modules
+react-app/node_modules/
 
-.terraform.tfstate.lock.info
-terraform.tfstate
-.terraform.lock.hcl
-.terraform
+terraform/.terraform.tfstate.lock.info
+terraform/terraform.tfstate
+terraform/.terraform.lock.hcl
+terraform/.terraform/
