@@ -55,7 +55,7 @@ Her Zone için public ve private altağları oluşturuyoruz ECS hizmeti bu ağla
 ### ECS Fargate
 AWS Fargate, Amazon Web Services (AWS) tarafından sunulan bir konteyner çalıştırma hizmetidir. Fargate, kullanıcıların konteynerlerini yönetmek için bir sunucu havuzu oluşturmasına gerek kalmadan, konteynerleri doğrudan AWS üzerinde çalıştırmasına olanak tanır. Bu yaklaşım sunucusuz(serverless) olarak adlandırıyor. Projemizde bu şekilde deploy edebileceğimiz bir docker container'ı var bunu ECS Fargate üzerinde deploy edelim.
 
-Bu Aşamada ```ècs.tf``` dosyasında bir ```aws_ecs_cluster``` oluşturuyoruz, Cluster ECS hizmetimizin çalışacağı bir küme oluşturacak.
+Bu Aşamada ```ecs.tf``` dosyasında bir ```aws_ecs_cluster``` oluşturuyoruz, Cluster ECS hizmetimizin çalışacağı bir küme oluşturacak.
 Ardından ECS servisimizi tanımlıyoruz.
 ```tf
 resource "aws_ecs_service" "ecs_service" {
@@ -121,7 +121,7 @@ Burada oluşturulacak her bir task için gerekli donanım kaynağı, Container i
 Bizden bu task görevleri takip etmemiz için aws üzerinde bir dashboard oluşturmamız istendi, bunuda terraform ```aws_cloudwatch_dashboard``` modülü kullanarak ```cw.tf``` dosyasında oluşturdum.
 
 ### Security Group
-Bu aşamada bazı security group ayarları yapmamız gerekiyor, Son kullanıcıların public subnet üzerindeki task'lere ulaşması (siber güvenlik ve performans açısından) tehditdir . Örneğin tek bir task üzerine yük bindirilip uygulamanın istenmeyen hatalar vermesine sebep olunabilir. Bu yüzden çalışan task'lerin sadece load balancer'a hizmet vermesi ve load balancer'ın da tüm son kullanıcılara hizmet vermesi güvenli bir ağ hizmeti oluşturur. Bu bağlamda göstereceğim şekilde bir yapılandırma ile sunucu ve uygulama gücenliği artacaktır.
+Bu aşamada bazı security group ayarları yapmamız gerekiyor, Son kullanıcıların public subnet üzerindeki task'lere ulaşması (siber güvenlik ve performans açısından) tehditdir . Örneğin tek bir task üzerine yük bindirilip uygulamanın istenmeyen hatalar vermesine sebep olunabilir. Bu yüzden çalışan task'lerin sadece load balancer'a hizmet vermesi ve load balancer'ın da tüm son kullanıcılara hizmet vermesi güvenli bir ağ hizmeti oluşturur. Bu bağlamda göstereceğim şekilde bir yapılandırma ile sunucu ve uygulama güvenliği artacaktır.
 
 #### User --> Load Balancer --> Tasks  
 şeklinde bir yapılandırma sağlar.
