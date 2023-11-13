@@ -94,5 +94,5 @@ Pipeline da iki stage tanımladım;
 İlk stage build aşaması, bu aşamada projemde yaptığım değişikliklerin (örn: Yeni ana menü butonu) commit işlemi sonrası derlenerek yeni imajımın oluşturulmasını içeriyor. Öncelikle docker hub girişi yapıp ```docker build ``` komutunun çalıştırılmasını sağladım. Ardından daha sonra kullanabilmem için docker hub üzerine yeni imajımı gönderdim. 
 
 Sonraki stage'im deploy, uygulamamın deploy edilmiş olduğu sunucu servisi (AWS) üzerinde yeni güncellemenin deploy edilmesi adımlarını içeriyor. Bu adımda aws komutlarını işleyebilmem için awscli paketini yüklüyorum. Key ve region konfigürasyonu sonrasında ```aws ecs update-service --cluster $CLUSTER_NAME --service $SERVICE_NAME --force-new-deployment ``` komutu ile yeni uygulama imajımı ECS servisi üzerinde yayınlıyorum. Bu aşamada varsayılan olarak "Rolling Update" işlemi başlıyor.
-Bu işlem eski sürüme ait çalışan task'lerin birer birer kapatılıp yerine yeni oluşturulan güncel task'lerin geçmesini sağlar. Tüm Task'ler güncel haliyle değiştikten sonra işlem başarıyla tamamlanır.
+Bu işlem eski sürüme ait çalışan task'lerin birer birer kapatılıp yerine yeni oluşturulan güncel task'lerin geçmesini sağlar. Tüm task'ler güncel haliyle değiştikten sonra işlem başarıyla tamamlanır.
 
