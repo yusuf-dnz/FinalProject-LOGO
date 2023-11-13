@@ -50,7 +50,7 @@ React uygulama dizinimde bir gitlab reposu oluşturup projemin dosyalarını git
 Bu şekilde gerekli dizinler repoya gönderildikten sonra ```.gitlab-ci.yml``` oluşturulması isteniyor.
 Pipeline için gerekli adım ve tanımlamalar bu dosyada oluşturulacak.
 
-```
+```yml
 image: docker
 
 stages:
