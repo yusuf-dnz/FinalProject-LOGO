@@ -269,6 +269,29 @@ Hata yoksa altyapıyı uygulamak için aşşağıdaki komut çalıştırılır v
 ```
 terraform apply
 ```
+![image](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/4a53cc1d-69ef-4211-b75b-7c7cb129225c)
+
+Komut sonrasında herhangi bir hata verilmediyse altyapımız hazır demektir.
+
+VPC subnetin durumu bu şekilde. Her Availiblity Zone için public ve private alt ağlar oluşturuldu.
+![Ekran görüntüsü 2023-11-13 233820](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/4f16cace-499a-406b-b00b-a52826511439)
+
+Cluster ve Task başarıyla eklendiğini AWS Console üzerinden görebiliriz.
+![Ekran görüntüsü 2023-11-13 234138](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/7334c0cd-d632-4e6f-a997-4c711bf6fc9d)
+
+Sunucu metriklerini izleyebileceğimiz dashboard ekranı.
+![Ekran görüntüsü 2023-11-13 233903](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/1cf2c320-d9a7-4828-90e2-7f87e2dde77a)
+
+Task'lerin ip adresini güvenlik amacıyla dışardan erişime kapatmıştık. Bu şekilde ip adresine istek attığınızda erişim alamadığımızı teyit edebiliriz.
+![Ekran görüntüsü 2023-11-13 234333](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/c2f76cf0-c480-484d-bf5b-9fa140f5ae36)
+
+Load Balancer public olarak erişilebilir durumda ve bu istediğimiz durum.
+![Ekran görüntüsü 2023-11-13 234011](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/43797831-e3e5-42e6-bc65-16af2e18f33a)
+
+Auto Scale için oluşturduğumuz CloudWatch alarmları bu şekilde. İki task ile başlayan sistemimiz düşük cpu load durumundan dolayı küçülmeye gitmiş ve sadece bir adet task çalışır tutuyor.
+
+![Ekran görüntüsü 2023-11-14 000013](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/7f6e042f-9dc8-440b-bd16-6cfa61b213ee)
+
 Sunucuyu başlatmak kadar yok etmekte basit bir işlem. Aşşağıdaki komutla tüm sunucu ve hizmetler silinir.
 ```
 terraform destroy
