@@ -2,7 +2,7 @@
 <h2 align="center" >LOG-in DevOps Bootcamp Bitirme Projesi</h2>
 
 ## Proje isterleri
-- React kullanarak bir web uygulaması oluşturulmak.
+- React kullanarak bir web uygulaması oluşturmak.
 - Web uygulamanın dockerize edilmesi.
 - Kubernetes ortamında deploy.
 - Terraform ile AWS altyapısının oluşturulması.
