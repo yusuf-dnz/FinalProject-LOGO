@@ -35,7 +35,7 @@ USAGE: Diskin çalışma zamanındaki doluluk oranı.
 
 USAGE içerisine bu şekilde bir değer atılıyor.
 
-![image](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/8294b634-2c5f-44c1-a9be-8fbe807b0193)
+![ansible1](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/c90abe14-edc8-448e-a84b-30e716c362ef)
 
 Bu script'in periyodik olarak çalışması gerekiyor, ansible-playbook  kullanarak cron ile bir görev atayacağız ve bu script disk belirli aralıklarla çalışacak.
 ```disk usage_playbook.yml``` dosyasını yapılandırmak.
@@ -53,7 +53,8 @@ Bu yapılandırma dosyasında tasks kısmında görev tanımlıyoruz. Name e gö
 ```
 ansible-playbook disk_usage_playbook.yml
 ```
-![image](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/6fc8853e-936c-4129-a2be-97e549007f7b)
+![ansible2](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/ca1a1811-8995-4290-861e-2230639ce715)
+
 Kendi makinemdeki linux dağıtımına bu görevi ekledim, çıktısı yukarıdaki şekilde.
 
 Mail gönderimi için ```/etc/ssmtp/ssmtp.conf``` dosyası içerisine smtp de kullanılacak mail adresi mail sunucusu user ve password bilgilerinin tanımlanması gerekiyor.
