@@ -258,9 +258,9 @@ terraform plan
 ```
 Bu aşamada ```variable.tf``` belirtmediğim için benden aws hesabımın public ve private key'lerini istiyor.
 
-![image](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/8493eae1-5481-4210-b9f7-686ebd4de792)
+![terra1](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/5a4eda5a-6160-4d4d-9221-127b7cb7c15e)
 
-![image](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/95fb6a62-6e6f-48db-8d0b-52bd11ac5f5a)
+![terra2](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/cd7e31c1-6952-45e4-b652-d72bd77d37e2)
 
 Bu komut ile tüm eklenecek hizmetler gözden geçirilir bu aşamada herhangi bir hata varsa düzeltilmeli.
 
@@ -269,28 +269,28 @@ Hata yoksa altyapıyı uygulamak için aşşağıdaki komut çalıştırılır v
 ```
 terraform apply
 ```
-![image](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/4a53cc1d-69ef-4211-b75b-7c7cb129225c)
+![terra3](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/70038f9f-5c7d-41d3-a89f-c64316102e31)
 
 Komut sonrasında herhangi bir hata verilmediyse altyapımız hazır demektir.
 
 VPC subnetin durumu bu şekilde. Her Availiblity Zone için public ve private alt ağlar oluşturuldu.
-![Ekran görüntüsü 2023-11-13 233820](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/4f16cace-499a-406b-b00b-a52826511439)
+![terra4](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/53b8fc63-9aa4-4c08-b461-4014f5da7101)
 
 Cluster ve Task başarıyla eklendiğini AWS Console üzerinden görebiliriz.
-![Ekran görüntüsü 2023-11-13 234138](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/7334c0cd-d632-4e6f-a997-4c711bf6fc9d)
+![terra5](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/ccc6e418-f5a9-462c-a90d-cc74d850b16a)
 
 Sunucu metriklerini izleyebileceğimiz dashboard ekranı.
-![Ekran görüntüsü 2023-11-13 233903](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/1cf2c320-d9a7-4828-90e2-7f87e2dde77a)
+![terra6](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/c5efc191-6d7b-45c7-8cc4-5aa7146a32fa)
 
 Task'lerin ip adresini güvenlik amacıyla dışardan erişime kapatmıştık. Bu şekilde ip adresine istek attığınızda erişim alamadığımızı teyit edebiliriz.
-![Ekran görüntüsü 2023-11-13 234333](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/c2f76cf0-c480-484d-bf5b-9fa140f5ae36)
+![terra7](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/260286ee-7e19-47c2-bc9d-f7e1a7d0c6d7)
 
 Load Balancer public olarak erişilebilir durumda ve bu istediğimiz durum.
-![Ekran görüntüsü 2023-11-13 234011](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/43797831-e3e5-42e6-bc65-16af2e18f33a)
+![terra8](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/5d6a5a49-2742-470a-9656-0a32f235c076)
 
 Auto Scale için oluşturduğumuz CloudWatch alarmları bu şekilde. İki task ile başlayan sistemimiz düşük cpu load durumundan dolayı küçülmeye gitmiş ve sadece bir adet task çalışır tutuyor.
 
-![Ekran görüntüsü 2023-11-14 000013](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/7f6e042f-9dc8-440b-bd16-6cfa61b213ee)
+![terra9](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/771cb487-65a1-4a21-9188-c68e84f3e1c3)
 
 Sunucuyu başlatmak kadar yok etmekte basit bir işlem. Aşşağıdaki komutla tüm sunucu ve hizmetler silinir.
 ```
