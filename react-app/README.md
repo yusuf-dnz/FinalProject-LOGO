@@ -36,25 +36,25 @@ Build aşaması için öncelikle ```FROM``` ile node.js image'i  seçiyoruz. ça
 Dockerfile dosyası dizininde bu komut çalıştırılır.
 ```docker build -t ysfdnz/logo-project:latest```
 
-![image](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/27479523-472c-456c-b7f6-9ff3c56384cb)
+![react1](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/94618832-c906-4fdb-abc7-b9e5746554a4)
 
 Yaklaşık 20MB boyutundaki react imajımız oluşturuldu. Konteynerı kendi bilgisayarımda çalıştırıp uygulamamı ```localhost``` adresinde görebilirim.
 ```
 docker run -p 80:80 ysfdnz/logo-project:latest
 ```
-![image](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/abd59cb3-892c-48ad-bbc2-c033e8ba00f5)
+![react2](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/5f53a953-063c-4285-8aa2-5eba21329868)
 
 ### GitLab CI/CD Pipeline
 CI/CD süreci yazılım ve sistemin güncel kalması için çok önemli bir süreçtir. Bu süreçleri otomasyona oturmak için belli araçlar vardır. Bu projemde GitLab kullanarak bir pipeline oluşturacağım. bu sayede yaptığım değişiklikleri basit bir commit işlemi ile canlı sistemime aktarabileceğim.
 
 React uygulama dizinimde bir gitlab reposu oluşturup projemin dosyalarını gitlab da depoladım.
-![image](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/7db560cd-44b3-40c1-8551-780a5166f975)
+![react3](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/fc62d649-d6c3-4faf-a09d-de30c6f2f8ba)
 
 Bu şekilde gerekli dizinler repoya gönderildikten sonra ```.gitlab-ci.yml``` oluşturulması isteniyor.
 Pipeline için gerekli adım ve tanımlamalar bu dosyada oluşturulacak.
 
 Runner üzerinde kullanılacak keyler güvenlik nedeniyle GitLab CI/CD variables kısmında tanımlanır.
-![image](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/1c3acf4b-7d85-45b0-8c7d-21a9a20addea)
+![react4](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/f9f2cbad-fe8f-460d-bc8f-42ba3b778961)
 
 
 ```yml
@@ -102,8 +102,8 @@ bu aşamada projemde yaptığım değişikliklerin (örn: Yeni ana menü butonu)
 #### Deploy
 Uygulamamın deploy edilmiş olduğu sunucu servisi (AWS) üzerinde yeni güncellemenin deploy edilmesi adımlarını içeriyor. Bu adımda aws komutlarını işleyebilmem için awscli paketini yüklüyorum. Key ve region konfigürasyonu sonrasında ```aws ecs update-service``` komutu ile yeni uygulama imajımı ECS servisi üzerinde yayınlıyorum. Bu aşamada varsayılan olarak "Rolling Update" işlemi başlıyor. Bu işlem eski sürüme ait çalışan task'lerin birer birer kapatılıp yerine yeni oluşturulan güncel task'lerin geçmesini sağlar. Tüm task'ler güncel haliyle değiştikten sonra işlem başarıyla tamamlanır.
 
-![Ekran görüntüsü 2023-11-14 000211](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/84adf2e0-b02d-4d37-9366-e4e91e1e1c0c)
+![react5](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/e3764136-00d3-4aaa-9cd6-d0ee7b7777df)
 
 Uygulamamız Rolling Update yöntemiyle yeni sürümü deploy edildi.
 
-![Ekran görüntüsü 2023-11-13 235926](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/61446d26-b841-4ef7-a725-fe01a8527e40)
+![react6](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/5682f9de-ffcc-42a0-a629-b5895114ffcb)
