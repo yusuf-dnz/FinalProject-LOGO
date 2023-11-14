@@ -33,7 +33,7 @@ Komut ile deploy edilir.
 ```
 kubectl apply -f deployment_react_app.yaml
 ```
-![image](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/a810fda8-2f1a-4805-9f3e-940860f99d25)
+![kubernetes1](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/0f916dc9-f48b-4355-b791-071edc99b682)
 
 ### Load Balancer Kubernetes
 Pod'lar arasında kullanıcı veya sistem isteklerini eşit olarak tüm replica'lara dağıtmak için LoadBalancer servisleri kullanılır bu konteynerların güvenliği ve performansı açısından önemlidir.
@@ -56,7 +56,7 @@ spec:
 ```
 kubectl apply -f deployment_react_app.yaml
 ```
-![image](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/08356e51-034c-4ca6-92d8-539ae4bc5b1d)
+![kubernetes2](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/c0dce0da-b478-4995-9052-ca6daff91b83)
 
 ### App Scale (Uygulama Ölçekleme)
 Kubernetes'de app scale için iki yöntem vardır, Horizontal(Yatay) ölçekleme ve Vertical(Dikey) ölçekleme bu yöntemler arasında temelde farklar vardır.
