@@ -10,6 +10,7 @@
 - (Ansible & Shell) kullanımı ile uyarı servisi oluşturmak.
 
 ## Sistem Dizaynı;
-![aws-architecture drawio](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/f213645d-7e16-41c8-a556-b9aab94025d7)
+
+![aws-architecture drawio](https://github.com/yusuf-dnz/FinalProject-LOGO/assets/101550162/c4d62e90-baa6-427f-87a0-f29a72534456)
 
 <h3 align="center" >Proje aşamalarının README.md dosyaları kendi dizinleri içerisinde</h3>
